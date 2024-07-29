@@ -11,23 +11,12 @@ def load_readme():
         return f.read()
 
 
-def load_about():
-    about = {}
-    with io.open(
-        os.path.join(HERE, "demo-plugin", "__about__.py"),
-        "rt",
-        encoding="utf-8",
-    ) as f:
-        exec(f.read(), about)  # pylint: disable=exec-used
-    return about
 
-
-ABOUT = load_about()
 
 
 setup(
     name="demo-plugin",
-    version=ABOUT["__version__"],
+    version="17.0.0",
     url="https://github.com/KenanAljaber/open-edx-plugin-demo.git",
     project_urls={
         "Code": "https://github.com/KenanAljaber/open-edx-plugin-demo.git",
