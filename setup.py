@@ -54,7 +54,7 @@ setup(
     },
     entry_points={
         "lms.djangoapp": [
-            "demoplugin = demo-plugin.plugin"
+            "demoplugin = demo-plugin.apps:MyAppConfig",
         ]
     },
     classifiers=[
