@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 class MyAppConfig(AppConfig):
-    name = 'plugin'
+    name = 'demo_plugin'
 
     plugin_app = {
         'signals_config': {
