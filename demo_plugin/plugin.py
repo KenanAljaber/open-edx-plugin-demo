@@ -1,7 +1,7 @@
 
 
 
-print("Hello, world! from plugin.py")
+print("Hello, world! from plugin.py updated")
 
 
 def on_session_login_completed(user, **kwargs):
