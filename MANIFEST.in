@@ -1,0 +1,2 @@
+recursive-include demo-plugin/patches *
+recursive-include demo-plugin/templates *
