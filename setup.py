@@ -1,3 +1,30 @@
+import io
+import os
+
+from setuptools import find_packages, setup
+
+HERE = os.path.abspath(os.path.dirname(__file__))
+
+
+def load_readme():
+    with io.open(os.path.join(HERE, "README.rst"), "rt", encoding="utf8") as f:
+        return f.read()
+
+
+def load_about():
+    about = {}
+    with io.open(
+        os.path.join(HERE, "demo-plugin", "__about__.py"),
+        "rt",
+        encoding="utf-8",
+    ) as f:
+        exec(f.read(), about)  # pylint: disable=exec-used
+    return about
+
+
+ABOUT = load_about()
+
+
 setup(
     name="demo-plugin",
     version=ABOUT["__version__"],
