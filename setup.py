@@ -44,7 +44,10 @@ setup(
     entry_points={
         "lms.djangoapp": [
             "demoplugin = demo_plugin.apps:MyAppConfig",
-        ]
+        ],
+        "cms.djangoapp": [
+            "demoplugin = demo_plugin.apps:MyAppConfig",
+        ],
     },
     classifiers=[
         "Development Status :: 3 - Alpha",

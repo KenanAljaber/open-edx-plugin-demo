@@ -15,8 +15,16 @@ class MyAppConfig(AppConfig):
                     'signal_path': 'openedx_events.content_authoring.signals.COURSE_CREATED',
                 },
                 {
-                    'receiver_func_name': 'on_course_created',
+                    'receiver_func_name': 'on_course_enrollment_created',
                     'signal_path': 'openedx_events.learning.signals.COURSE_ENROLLMENT_CREATED',
+                },
+                {
+                    'receiver_func_name': 'on_certificate_created',
+                    'signal_path': 'openedx_events.learning.signals.CERTIFICATE_CREATED',
+                },
+                {
+                    'receiver_func_name': 'on_certificate_awarded',
+                    'signal_path': 'openedx_events.learning.signals.PROGRAM_CERTIFICATE_AWARDED',
                 },
                 
                 
