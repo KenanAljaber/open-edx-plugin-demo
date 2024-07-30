@@ -11,10 +11,6 @@ class MyAppConfig(AppConfig):
                     'signal_path': 'openedx_events.learning.signals.SESSION_LOGIN_COMPLETED',
                 },
                 {
-                    'receiver_func_name': 'on_course_created',
-                    'signal_path': 'openedx_events.content_authoring.signals.COURSE_CREATED',
-                },
-                {
                     'receiver_func_name': 'on_course_enrollment_created',
                     'signal_path': 'openedx_events.learning.signals.COURSE_ENROLLMENT_CREATED',
                 },
@@ -28,6 +24,15 @@ class MyAppConfig(AppConfig):
                 },
                 
                 
+                ],
+            },
+            "cms.djangoapp": {
+                "relative_path": "plugin",
+                "receivers": [
+                    {
+                        "receiver_func_name": "on_course_created",
+                        "signal_path": "openedx_events.content_authoring.signals.COURSE_CREATED",
+                    },
                 ],
             }
         }
